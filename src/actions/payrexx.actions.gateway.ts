@@ -1,9 +1,17 @@
 import PayRexx from "../index";
 import { DeleteResponse, PayrexxActions } from "./payrexx.actions";
-import {payrexxTypesCurrency} from "../types/payrexx.types.currency";
+import { payrexxTypesCurrency } from "../types/payrexx.types.currency";
 
 const axios = require("axios");
 const qs = require("qs");
+
+export type BasketProduct = {
+  name: string[];
+  description?: string[];
+  quantity: number;
+  amount: number;
+  vatRate: number;
+};
 
 // Request interface
 export interface IGatewayCreate {
@@ -67,6 +75,9 @@ export interface IGatewayCreate {
 
   successMessage?: string;
   //Custom success message on result page.
+
+  basket?: BasketProduct[];
+  //List of all products (incl. shipping costs).
 
   ApiSignature?: any;
 }
