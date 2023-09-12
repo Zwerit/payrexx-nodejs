@@ -27,7 +27,8 @@
     "build": "tsc",
     "npm:pack": "npm pack",
     "node": "node dist/index.js",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "test": "jest"
   },
   "author": "https://github.com/WeslleyDeSouza",
   "license": "ISC"
