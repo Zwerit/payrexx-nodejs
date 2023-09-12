@@ -13,6 +13,24 @@ export type BasketProduct = {
   vatRate: number;
 };
 
+export type FieldObject = {
+  value: string;
+};
+
+export type Fields = {
+  title?: FieldObject;
+  forename?: FieldObject;
+  surname?: FieldObject;
+  company?: FieldObject;
+  street?: FieldObject;
+  postcode?: FieldObject;
+  place?: FieldObject;
+  phone?: FieldObject;
+  country?: FieldObject;
+  email?: FieldObject;
+  date_of_birth?: FieldObject;
+};
+
 // Request interface
 export interface IGatewayCreate {
   amount: number;
@@ -58,7 +76,7 @@ export interface IGatewayCreate {
   referenceId?: string;
   //An internal reference id used by your system.
 
-  fields?: any;
+  fields?: Fields;
   //The contact data fields which should be stored along with payment
 
   concardisOrderId?: string;
