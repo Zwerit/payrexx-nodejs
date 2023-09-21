@@ -29,6 +29,14 @@ export type Fields = {
   country?: FieldObject;
   email?: FieldObject;
   date_of_birth?: FieldObject;
+  delivery_title?: FieldObject;
+  delivery_forename?: FieldObject;
+  delivery_surname?: FieldObject;
+  delivery_company?: FieldObject;
+  delivery_street?: FieldObject;
+  delivery_postcode?: FieldObject;
+  delivery_place?: FieldObject;
+  delivery_country?: FieldObject;
 };
 
 // Request interface
@@ -123,6 +131,14 @@ export interface IGatewayResponseFields {
   phone: FieldOption;
   email: FieldOption;
   date_of_birth: FieldOption;
+  delivery_title: FieldOption;
+  delivery_forename: FieldOption;
+  delivery_surname: FieldOption;
+  delivery_company: FieldOption;
+  delivery_street: FieldOption;
+  delivery_postcode: FieldOption;
+  delivery_place: FieldOption;
+  delivery_country: FieldOption;
 }
 
 export type GatewayStatus = "waiting" | "confirmed" | "authorized" | "reserved";
