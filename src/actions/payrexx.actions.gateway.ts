@@ -236,7 +236,7 @@ export class GatewayActions extends PayrexxActions<
     if (!params.amount) {
       throw new Error("Amount required!");
     }
-    let data = qs.stringify(params);
+    let data = qs.stringify(params, { format: "RFC1738" });
     params.ApiSignature = this.rex.auth.buildSignature(data);
     data = qs.stringify(params);
 
