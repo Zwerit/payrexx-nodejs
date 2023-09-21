@@ -122,7 +122,6 @@ export interface IGatewayResponseFields {
   country: FieldOption;
   phone: FieldOption;
   email: FieldOption;
-  text: FieldOption;
   date_of_birth: NamedFieldOption;
 }
 
