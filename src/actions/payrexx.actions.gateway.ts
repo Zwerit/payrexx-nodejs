@@ -122,7 +122,7 @@ export interface IGatewayResponseFields {
   country: FieldOption;
   phone: FieldOption;
   email: FieldOption;
-  date_of_birth: NamedFieldOption;
+  date_of_birth: FieldOption;
 }
 
 export type GatewayStatus = "waiting" | "confirmed" | "authorized" | "reserved";
