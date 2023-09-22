@@ -6,7 +6,7 @@ const qs = require("qs");
 
 class Design {
 
-  name: string
+  name!: string
   //Name of the design
 
   default?: 0 | 1
